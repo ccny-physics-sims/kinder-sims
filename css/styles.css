@@ -1,0 +1,42 @@
+/*general*/
+html {overflow:hidden;}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  user-select:none;
+  /* This centers our sketch horizontally. */
+  justify-content: center;
+
+  /* This centers our sketch vertically. */
+  align-items: center;
+  /* background-color: #eee; */
+  background: radial-gradient(#fff, #eee, #aaa);
+}
+
+ #sketch-holder {
+  border: 2px solid #aaa;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #fff;
+}
+
+h3.simTitle {
+  position: fixed;
+  top: 10px;
+  font-family: Helvetica;
+  color: #555;
+}
+
+.funButton {
+  
+  font-size: 2em;
+  font-family: Helvetica;
+  border-radius: 50%;
+  border: 2px solid black;
+  box-shadow: 10px 10px 10px -0px hsla(0,0%,0%,.2);
+}
