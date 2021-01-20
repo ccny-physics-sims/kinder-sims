@@ -5,7 +5,7 @@ let symmetryCountSlider;
 let strokeColor;
 let mirror = true;
 
-let theme = [[126, 95, 100,'#0DFF25'],[15, 100, 96,'#F43D00'],[55, 82, 96,'#FFEF2F'],[282, 95, 87,'#9E0BDE'],[204, 95, 96,'#0296FA'],[30,99,88,'#E07102'],[0,0,0,'#000000'],[1,1,1,'#ffffff']]
+let theme = [[120, 76, 80,'#32cd32'],[15, 100, 96,'#F43D00'],[55, 82, 96,'#FFEF2F'],[282, 95, 87,'#9E0BDE'],[204, 95, 96,'#0296FA'],[30,99,88,'#E07102'],[0,0,0,'#000000'],[1,1,1,'#ffffff']]
 let alphas = ['ff','dd','cc','bb','aa']
 
 let mean = 0
@@ -25,6 +25,14 @@ function setup() {
   symSelectPicker.id('symSelectPicker')
   symSelectPicker.parent('sketch-holder')
 
+  checkbox = createCheckbox('mirror?', true);
+  checkbox.parent('sketch-holder')
+  checkbox.changed(switchMirror);
+  checkbox.position(theme.length*63+20,15)
+  checkbox.class('mirrorCheck')
+  const box = checkbox.elt.getElementsByTagName('input')[0];
+  box.style.width = '50px';
+  box.style.height = '50px';
 
   //
   // checkbox = createCheckbox('mirror?', true);
@@ -104,14 +112,15 @@ function saveFile() {
 }
 
 
-// function switchMirror(){
-//   if (mirror) {
-//   mirror = false;
-// } else {
-//   mirror = true;
-// }
-//
-// }
+function switchMirror(){
+  if (mirror) {
+  mirror = false;
+} else {
+  mirror = true;
+}
+}
+
+
 function draw() {
   // push()
   //
