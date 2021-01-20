@@ -108,7 +108,7 @@ function changeStroke(arg) {
 
 function saveFile() {
   //save('design.jpg');
-  saveCanvas(canvas, 'manadala', 'jpg');
+  saveCanvas(canvas, 'mydrawing', 'jpg');
 }
 
 
